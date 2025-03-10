@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
-      "target": "es2016",
+      "outDir": "./dist/",
+      "sourceMap": true,
+      "target": "ES6",
       "module": "commonjs",
       "esModuleInterop": true,
       "forceConsistentCasingInFileNames": true,
@@ -8,6 +10,5 @@
       "skipLibCheck": true
     },
     "include": [
-      "./src/*.ts"
-, "src/socket/SocketServer.ts"    ]
+      "./src/*.ts"]
   }

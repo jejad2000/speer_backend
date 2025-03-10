@@ -29,3 +29,5 @@ httpServer = createHttpServer(app);
 httpServer.listen(3005, () => {
   console.info(`Listening on 3005`);
 });
+
+export default app;

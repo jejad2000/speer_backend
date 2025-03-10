@@ -48,7 +48,7 @@ export class NotesController {
                 data: { title, content } 
             });
 
-            return successResponse(res, "Note update successfully");
+            return successResponse(res, "Note updated successfully");
         } catch (err) {
             return errorResponse(res, "Failed to update note");
         }
@@ -139,7 +139,6 @@ export class NotesController {
         const userId = req.user?.userId;
         const query = req.query.q as string;
 
-        console.log(query);
         if (!query) {
             return validationError(res, "Search query is required");
         }
@@ -155,7 +154,6 @@ export class NotesController {
 
             return successResponseWithData(res, "Notes retrieved successfully", notes);
         } catch (err) {
-            console.log(err);
             return errorResponse(res, "Failed to get notes");
         }
     }
