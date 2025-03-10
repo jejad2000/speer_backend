@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import routes from './routes';
 import cookieParser from 'cookie-parser';
-import { limiter, speedLimiter } from './middleware/rateLimiter';
+import { limiter, speedLimiter } from './middleware/RateLimiter';
 import { Server as HttpServer, createServer as createHttpServer } from 'http';
 
 const app = express();
