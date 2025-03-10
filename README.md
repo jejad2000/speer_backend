@@ -8,23 +8,23 @@ This is a Note Management API built using Node.js, Express, and Prisma with Post
   - JWT (JSON Web Tokens) for authentication
 
 ## Why I use this tech stack
-   **Node.js**
-     * I'm  comfortable working with Node.js with express framework.
-     * A vast ecosystem of npm packages provides a wealth of libraries and tools to accelerate development.
-     * Node.js is well-suited for building scalable applications, especially real-time applications and APIs.
+**Node.js**
+   - I'm  comfortable working with Node.js with express framework.
+   - A vast ecosystem of npm packages provides a wealth of libraries and tools to accelerate development.
+   - Node.js is well-suited for building scalable applications, especially real-time applications and APIs.
 
-   **PostgreSQL**  
-     * My database experience is primarily with MySQL, however, PostgreSQL is a close second. I've gained practical experience with PostgreSQL and find it a very capable database solution. It was mentioned also that it is the preferred DB.
-     * A mature, open-source relational database system known for its stability, reliability, and data integrity.
-     * PostgreSQL can scale to handle large datasets and high traffic loads, and is very performant.
+**PostgreSQL**  
+   - My database experience is primarily with MySQL, however, PostgreSQL is a close second. I've gained practical experience with PostgreSQL and find it a very capable database solution. It was mentioned also that it is the preferred DB.
+   - A mature, open-source relational database system known for its stability, reliability, and data integrity.
+   - PostgreSQL can scale to handle large datasets and high traffic loads, and is very performant.
 
-   **Prisma ORM**
-     * For better code clarity and maintainability, I prefer to pair databases with an ORM. Prisma is one of the ORMs I'm eager to explore, primarily because migration feature, schema management, type safety and so on.
+**Prisma ORM**
+   - For better code clarity and maintainability, I prefer to pair databases with an ORM. Prisma is one of the ORMs I'm eager to explore, primarily because migration feature, schema management, type safety and so on.
 
-   **JWT**
-     * I'm familiar using this for authentication
-     * JWTs are self-contained, meaning all the necessary information for authentication is included within the token itself. This eliminates the need to store session information on the server, making it easier to scale applications. 
-     * JWTs are commonly used for API authentication, as they can be easily included in the Authorization header of HTTP requests.
+**JWT**
+   - I'm familiar using this for authentication
+   - JWTs are self-contained, meaning all the necessary information for authentication is included within the token itself. This eliminates the need to store session information on the server, making it easier to scale applications. 
+   - JWTs are commonly used for API authentication, as they can be easily included in the Authorization header of HTTP requests.
 
 ## Installation
 
