@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  email         String   @unique
+  password      String
+  created_at    DateTime @default(now())
+  notes         Note[]
+  refresh_token RefreshToken[]
+  shared_notes  SharedNotes[]
+}
+
+model Note {
+  id          Int      @id @default(autoincrement())
+  title       String
+  content     String
+  user_id      Int
+  created_at  DateTime @default(now())
+  user        User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  sharedWith  SharedNotes[]
+
+  @@index([title, content], map: "note_text_idx") // Creates a text index
+}
+
+model SharedNotes {
+  id          Int  @id @default(autoincrement())
+  user_id     Int
+  notes_id    Int
+  created_at  DateTime @default(now())
+  notes       Note @relation(fields: [notes_id], references: [id], onDelete: Cascade)
+  user        User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([notes_id, user_id])
+}
+
+model RefreshToken {
+  id         Int      @id @default(autoincrement())
+  user_id    Int      
+  token      String   @unique
+  created_at DateTime @default(now())
+  revoked_at DateTime? // Null means it's still valid
+  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([revoked_at], map: "date_idx") // Creates a revoked index
+}
