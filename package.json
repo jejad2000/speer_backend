@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "npm install && node dist/index.js",
     "test": "jest \"test/.*\\.test\\.ts\"",
     "test:unit": "jest test/unit --coverage",
     "test:integration": "jest test/integration --coverage"
