@@ -2,27 +2,16 @@
 
 ## Project Overview
 
-This application allows users to **add** and **update** notes in a WYSIWYG editor that supports rich text formatting, such as **bold**, *italic*, and _underline_. It also includes a **live preview** of the notes and supports **real-time collaboration** where multiple users can edit and update notes simultaneously.
-
-The backend utilizes WebSocket connections for real-time updates, and the front-end features include a rich text editor powered by **ReactQuill** for a smooth and intuitive user experience.
+This is a Note Management API built using Node.js, Express, and Prisma with PostgreSQL as the database. The API provides features for users to create, read, update, delete (CRUD), search, and share notes.
 
 ## Tech Stack
 
 - **Backend**:
   - Node.js with **Express**
-  - Socket.IO for real-time communication
+  - Database: PostgreSQL (with Prisma ORM)
   - JWT (JSON Web Tokens) for authentication
 
 ## Features Implemented
-
-- **WYSIWYG Editor**: A powerful editor for text formatting like bold, italic, and underline.
-- **Real-Time Collaboration**: Changes to notes are updated across all connected clients immediately.
-- **Live Preview**: Changes in the editor are instantly reflected in a live preview.
-- **WebSocket Integration**: Uses **Socket.IO** to enable real-time communication between the server and clients.
-- **JWT Authentication**: Secure user login and registration using JSON Web Tokens (JWT).
-
-## Future Improvements
-- **Add Database to Save Data**: Integrate a database (e.g., PostgreSQL, MongoDB) to persist data for notes, user accounts, and other relevant information. This will ensure that notes are saved even when the server or application is restarted and can be retrieved when users log in.
 
 ## Installation
 
@@ -36,8 +25,8 @@ Before starting, make sure you have the following installed:
 
 1. Clone the repository:
 ```bash
-   git clone https://github.com/jejad2000/pbackend.git
-   cd pbackend
+   git clone https://github.com/jejad2000/speer_backend.git
+   cd speer_backend
 ```
 2. Install dependencies for back-end:
 ```bash
@@ -52,8 +41,14 @@ Create a .env file in the server directory and add the necessary environment var
 Example .env for the server:
 ```bash
    JWT_SECRET=your_jwt_secret
+   JWT_REFRESH_SECRET=your_jwt_refresh_token
+   DATABASE_URL="postgresql://{user}:{password}@127.0.0.1:5432/{your_db_name}?schema=public"
 ``` 
-4. Start the backend application:
+4. Run Database Migrations:
+```bash
+   npx prisma migrate dev --name init"
+``` 
+5. Start the backend application:
 ```bash
    npm dev 
 ``` 
