@@ -7,7 +7,7 @@ This is a Note Management API built using Node.js, Express, and Prisma with Post
   - Database: PostgreSQL (with Prisma ORM)
   - JWT (JSON Web Tokens) for authentication
 
-## Why I use this tech stack
+## Why I use this Tech Stack
 **Node.js**
    - I'm  comfortable working with Node.js with express framework.
    - A vast ecosystem of npm packages provides a wealth of libraries and tools to accelerate development.
@@ -25,6 +25,11 @@ This is a Note Management API built using Node.js, Express, and Prisma with Post
    - I'm familiar using this for authentication
    - JWTs are self-contained, meaning all the necessary information for authentication is included within the token itself. This eliminates the need to store session information on the server, making it easier to scale applications. 
    - JWTs are commonly used for API authentication, as they can be easily included in the Authorization header of HTTP requests.
+
+**TypeScript**
+   - Better code readability and easy to maintain
+   - TypeScript's type checker can catch errors during development, before the code is executed. This allows developers to fix errors early, reducing the risk of runtime errors.
+   - TypeScript has a large and active community, and there are many libraries and tools available that support TypeScript.
 
 ## Installation
 
