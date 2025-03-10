@@ -3,7 +3,7 @@ import { compare, hash } from 'bcryptjs';
 import { generateToken, generateRefreshToken, verifyRefreshToken } from '../utils/Auth';
 import { validationError, successResponseWithData, successResponse, notFoundResponse, errorResponse } from "../utils/ApiResponse";
 import { isEmailValid } from '../utils/Validator';
-import prisma from '../models/prismaClient';
+import prisma from '../models/PrismaClient';
 
 class UserAccessController {
 

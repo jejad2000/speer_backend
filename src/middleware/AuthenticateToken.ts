@@ -1,6 +1,6 @@
 import { unauthorizedResponse, notFoundResponse } from "../utils/ApiResponse";
 import { verifyToken, verifyRefreshToken } from '../utils/Auth';
-import prisma from '../models/prismaClient';
+import prisma from '../models/PrismaClient';
 
 export const authenticateToken  = async(req:any, res:any, next:any) => {
     const token = req.headers['authorization'];

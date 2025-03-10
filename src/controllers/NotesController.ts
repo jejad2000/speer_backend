@@ -1,5 +1,5 @@
 
-import prisma from '../models/prismaClient';
+import prisma from '../models/PrismaClient';
 import { successResponse, notFoundResponse, validationError, successResponseWithData, errorResponse } from "../utils/ApiResponse";
 
 export class NotesController {

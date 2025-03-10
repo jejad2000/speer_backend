@@ -1,6 +1,6 @@
 import request from "supertest";
 import app from "../../index"; // Import your Express app
-import PrismaClient from "../../models/prismaClient";
+import PrismaClient from "../../models/PrismaClient";
 
 describe("Note API Integration Tests", () => {
     let token: string;
