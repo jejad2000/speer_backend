@@ -91,6 +91,8 @@ Example .env for the server:
 
 Note: The backend will run on http://localhost:3005
 
+
+
 ## Running Tests
 
 ### Unit Tests
@@ -113,3 +115,5 @@ npm run test:integration
 yarn test:integration
 ``` 
 
+### Postman collection of  APIs
+Please see Test.postman_collection.json
